@@ -1,5 +1,200 @@
+:root {
+  --main-bg-color: rgb(240, 242, 245);
+  --main-color: rgb(101, 103, 107);
+  --primary-text-color: rgb(148, 149, 151);
+  --primary-fontSize: 15px;
+  --primary-fontSize-weight: 400;
+  --primary-box-bg-color: rgb(255, 255, 255);
+}
+
 * {
   padding: 0;
   margin: 0;
-  width: 100vw;
+  top: 0;
+  font-family: "Segoe UI Historic", "Segoe UI", Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+  font-size: var(--primary-fontSize);
+}
+
+main {
+  width: 100%;
+}
+main .nav-container {
+  display: flex;
+  align-items: center;
+  background: var(--primary-box-bg-color);
+  height: 60px;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border: 1px solid black;
+  gap: 5px;
+}
+main .nav-container .nav-left {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+
+main .nav-container .nav-left .logo {
+  align-items: center;
+  display: flex;
+}
+
+main .nav-container .nav-left .logo img {
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+
+main .nav-container .nav-left .search-wraper {
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  background: rgb(240, 242, 245);
+  padding: 10px;
+}
+
+main .nav-container .nav-left .search-wraper span {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+main .nav-container .nav-left .search-wraper input {
+  border: none;
+  background: inherit;
+  padding: 0 5px;
+  width: 200px;
+}
+main .nav-container .nav-left .search-wraper input:focus {
+  border: none;
+  outline: none;
+  transition: all 200sm ease;
+}
+
+main .nav-container .nav-center {
+  display: flex;
+  width: 100%;
+  flex: 1;
+}
+main .nav-container .nav-center .nav-center-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  padding: 10px;
+  border-radius: 10px;
+}
+main .nav-container .nav-center .nav-center-content div {
+  height: inherit;
+  width: inherit;
+  padding: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+  transition: all 300sm ease;
+}
+
+main .nav-container .nav-center .nav-center-content div .active span {
+  color: red !important;
+}
+main .nav-container .nav-center .nav-center-content div:hover {
+  background: rgb(240, 242, 245);
+  transition: all 300sm ease-in;
+
+  cursor: pointer;
+}
+main .nav-container .nav-right {
+  display: flex;
+  width: 100%;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+main .nav-container .nav-right .nav-wrapper {
+  display: flex;
+  gap: 1rem;
+}
+
+main .nav-container .nav-right .nav-wrapper .nav-user {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  cursor: pointer;
+  border-radius: 30px;
+  padding: 3px;
+  font-weight: 700;
+  width: 100px;
+
+  transition: all 300sm ease;
+}
+
+main .nav-container .nav-right .nav-wrapper .nav-user span {
+  display: flex;
+  align-items: center;
+}
+main .nav-container .nav-right .nav-wrapper .nav-user span img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+main .nav-container .nav-right .nav-wrapper .nav-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+main .nav-container .nav-right .nav-wrapper .nav-user:hover {
+  background: red;
+  transition: all 300sm ease;
+}
+main .nav-container .nav-right .nav-wrapper .nav-chat {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+main .nav-container .nav-right .nav-wrapper .nav-notitification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+main .nav-container .nav-right .nav-wrapper .nav-account {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+main .nav-container .nav-right .nav-wrapper .nav-chat,
+.nav-menu,
+.nav-account,
+.nav-notitification {
+  background: rgb(228, 230, 235);
+  transition: all 300sm ease;
+}
+
+main .nav-container .nav-right .nav-wrapper .nav-chat:hover,
+.nav-menu:hover,
+.nav-account:hover,
+.nav-notitification:hover {
+  opacity: 0.7;
+  transition: all 300sm ease;
 }
