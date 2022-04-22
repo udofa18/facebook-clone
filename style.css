@@ -17,11 +17,11 @@
   font-size: var(--primary-fontSize);
 }
 body {
-  width: 100vw;
+  width: 100%;
   background: rgb(240, 242, 245);
 }
 main {
-  width: 100%;
+  width: inherit;
   position: relative;
 }
 main .nav-container {
@@ -29,12 +29,10 @@ main .nav-container {
   align-items: center;
   background: var(--primary-box-bg-color);
   height: 60px;
+  width: inherit;
   justify-content: space-between;
   padding: 0.5rem;
-  border: 1px solid black;
   gap: 5px;
-  position: sticky;
-  z-index: 5;
 }
 main .nav-container .nav-left {
   display: flex;
@@ -89,7 +87,6 @@ main .nav-container .nav-center .nav-center-content {
   align-items: center;
   width: 100%;
   justify-content: space-between;
-
   padding: 10px;
   border-radius: 10px;
 }
@@ -100,13 +97,15 @@ main .nav-container .nav-center .nav-center-content div {
   display: flex;
   align-items: center;
   justify-content: center;
-
   border-radius: 10px;
   transition: all 300sm ease;
 }
 
-main .nav-container .nav-center .nav-center-content div .active span {
-  color: red !important;
+main .nav-container .nav-center .nav-center-content .active span {
+  color: rgb(11, 132, 237);
+  display: flex;
+  font-weight: 700;
+  font-size: 30px;
 }
 main .nav-container .nav-center .nav-center-content div:hover {
   background: rgb(240, 242, 245);
@@ -262,6 +261,9 @@ section .left-side-bar .side-top ul li span {
   display: flex;
   align-items: center;
   margin-right: 1rem;
+  color: rgb(57, 189, 201);
+  font-weight: 900;
+  fill: rgb(57, 189, 201);
 }
 
 section .left-side-bar .side-top ul li .profile-img img {
@@ -276,8 +278,38 @@ section .center-side-bar {
   flex: 4;
   width: 100%;
 }
+display: flex;
 section .right-side-bar {
-  display: flex;
   flex: 1;
   width: 100%;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  /* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+  main .nav-container {
+    /* display: none; */
+    width: 100vw;
+  }
+
+  main .nav-container .nav-right .nav-wrapper {
+    display: none;
+  }
+  .nav-center-content {
+    margin-right: 10px;
+  }
+}
+@media (min-width: 480px) {
+  /* smartphones, Android phones, landscape iPhone */
+}
+@media (min-width: 600px) {
+  /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+}
+@media (min-width: 801px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
 }
